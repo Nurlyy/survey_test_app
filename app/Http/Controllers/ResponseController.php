@@ -40,13 +40,6 @@ class ResponseController extends Controller
         if ($existingResponse) {
             // Если ответ уже существует, возвращаем ошибку или обновляем данные
             return response()->json(['error' => 'You have already answered this question'], 400);
-
-            // Альтернативно: если нужно обновить существующий ответ
-            // $existingResponse->update([
-            //     'option_id' => $data['option_id'],
-            //     'custom_answer' => $data['custom_answer'] ?? null,
-            // ]);
-            // return response()->json(['message' => 'Your response has been updated']);
         }
 
         // Сохранение нового ответа
